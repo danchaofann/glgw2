@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@drawable/gray_top_shape"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/rb_all"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="23dp"
+            android:src="@drawable/statistics_selector"/>
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="全选(0)"
+            android:textColor="#333"
+            android:textSize="13sp"
+            android:layout_marginLeft="4dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="14dp"
+            android:layout_height="match_parent"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:layout_marginRight="14dp"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_download_attachments"/>
+        <TextView
+            android:id="@+id/tv_download"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#FFFF7214"
+            android:gravity="center"
+            android:text="下载选中文件"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

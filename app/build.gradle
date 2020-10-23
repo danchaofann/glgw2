@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.worktowork.glgw"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //加上jdk1.8设置能解决  Error: Default interface methods are only supported starting with Android N
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+configurations.all {
+    resolutionStrategy {
+        force 'com.squareup.okhttp3:okhttp:3.12.5' // 支持API 19，限定版本
+        force 'androidx.appcompat:appcompat:1.0.2' // 适应Webview在安卓5.1上的bug
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // 引入multidex库
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.1.1'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //上拉加载下拉刷新
+    //1.0.5 当1.1.0出现问题可以回退到1.0.5.1
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-19'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-19'
+    //水流下拉刷新
+    implementation 'com.github.recruit-lifestyle:WaveSwipeRefreshLayout:1.6'
+    //rxjava
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    //gson
+    //    compile 'com.google.code.gson:gson:2.8.2'
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.12.5'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.5'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.blankj:utilcode:1.22.1'
+    implementation 'com.qmuiteam:qmui:1.1.3'
+    //注解
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.3'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    //Zloading加载动画
+    implementation 'com.zyao89:zloading:1.2.0'
+    implementation files('libs\\pinyin4android1.0.jar')
+    implementation files('libs\\pinyin4j-2.5.0.jar')
+    implementation 'com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.2.6'
+    implementation 'com.lxj:xpopup:1.8.0-x'
+
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    implementation 'com.github.chaychan:PowerfulViewLibrary:1.2.0'
+
+    implementation 'liji.library.dev:citypickerview:1.1.0'
+}

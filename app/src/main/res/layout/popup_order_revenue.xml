@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="263dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingLeft="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间"
+                    android:textSize="14sp"
+                    android:textColor="@drawable/gray_org_select"
+                    android:layout_gravity="center"/>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="#FFE2E2E2"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="至"
+                android:textColor="#FFE2E2E2"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="18dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="18dp">
+
+                <TextView
+                    android:id="@+id/tv_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束时间"
+                    android:textSize="14sp"
+                    android:textColor="@drawable/gray_org_select"
+                    android:layout_gravity="center"/>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:background="#FFE2E2E2"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <DatePicker
+            android:id="@+id/date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:calendarViewShown="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp">
+            <TextView
+                android:id="@+id/tv_reset"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_weight="2"
+                android:background="@drawable/gray_fitter_shape"
+                android:gravity="center"
+                android:text="重置"
+                android:textColor="#fff"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_yellow_shape"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

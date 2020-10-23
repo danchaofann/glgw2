@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <include layout="@layout/activity_toolbar"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="96dp"
+        android:src="@mipmap/logo_word"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="18dp"
+        android:textColor="#999"
+        android:textSize="12sp"
+        android:text="版本号V.1.4"/>
+
+    <LinearLayout
+        android:id="@+id/ll_privacy_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:layout_marginTop="51dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="隐私政策"
+            android:textColor="#333"
+            android:textSize="14sp"/>
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/right_back"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_user_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="用户协议"
+            android:textColor="#333"
+            android:textSize="14sp"/>
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/right_back"/>
+    </LinearLayout>
+</LinearLayout>

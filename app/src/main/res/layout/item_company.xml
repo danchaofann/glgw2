@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="19dp"
+        android:paddingBottom="19dp"
+        android:paddingLeft="59dp"
+        android:paddingRight="28dp">
+        <TextView
+            android:id="@+id/tv_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宁波大象网络有限公司"
+            android:textColor="#333"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"/>
+        
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="50dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center"
+            android:background="@drawable/gray_round_shape"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="合伙人"
+            android:textSize="13sp"
+            android:textColor="#FF031244"
+            android:layout_toRightOf="@+id/tv_company_name"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#FFF2F2F2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+</LinearLayout>
